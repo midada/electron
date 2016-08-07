@@ -1,0 +1,12 @@
+{
+  "name": "app",
+  "vsersion": "v1.0.0",
+  "description": "This is app",
+  "main": "main.js",
+  "devDependencies": {
+    "electron-packager": "^7.5.1"
+  },
+  "dependencies": {
+    "chart.js": "^2.2.1"
+  }
+}
