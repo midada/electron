@@ -12,8 +12,8 @@ let mainWindow
 app.on('ready', function() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600
+    width: 809,
+    height: 500
   })
 
   mainWindow.loadURL(`file://${__dirname}/index.html`)
