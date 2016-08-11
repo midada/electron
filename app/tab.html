@@ -5,6 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- Loading Jquery -->
+<script src="./Script/jquery-3.1.0.min.js"></script>
+
 <!-- Loading Bootstrap -->
 <link href="./bootstrap/css/bootstrap.min.css"  rel="stylesheet">
 <script src="./bootstrap/js/bootstrap.min.js"></script>
@@ -29,7 +32,7 @@
 
 <body>
 
-  <!-- 导航条 -->
+  <!-- 顶部导航条 -->
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -41,13 +44,11 @@
     </div>
   </nav>
 
+  <!-- 左侧菜单 -->
   <div class="container-fluid"  style="padding-top:70px">
     <div class="row">
-
       <div class="col-md-2">
-        <!-- 左侧菜单 -->
-        <!-- <ul class="nav nav-stacked affix" data-spy="affix"> -->
-        <ul  id="myTab" class="nav nav-stacked nav-tabs">
+        <ul id="myTab" class="nav nav-stacked affix" data-spy="affix">
           <li role="presentation">
             <a href="#tab1" data-toggle="tab"> Home</a>
           </li>
@@ -64,7 +65,8 @@
       <div class="col-md-10">
         <div class="tab-content">
 
-            <div  class="tab-pane fade" id="Home">
+            <div class="tab-pane fade in active" id="tab1">
+              <h1>桃花源记</h1>
               <p>晋太元中，武陵人捕鱼为业。缘溪行，忘路之远近。忽逢桃花林，夹岸数百步，中无杂树，
 芳草鲜美，落英缤纷，渔人甚异之。复前行，欲穷其林。
               <p>林尽水源，便得一山，山有小口，仿佛若有光。便舍船，从口入。初极狭，才通人。复行数十步，豁然开朗。土地平旷，屋舍俨然，有良田美池桑竹之属。
@@ -76,12 +78,14 @@
               <p>南阳刘子骥，高尚士也，闻之，欣然规往。未果，寻病终，后遂无问津者。</p>
             </div>
 
-            <div class="tab-pane fade" id="tab2">
-            <p>山不在高，有仙则名。水不在深，有龙则灵。斯是陋室，惟吾德馨。苔痕上阶绿，草色入帘青。
+            <div class="tab-pane active" id="tab2">
+              <h1>陋室铭</h1>
+              <p>山不在高，有仙则名。水不在深，有龙则灵。斯是陋室，惟吾德馨。苔痕上阶绿，草色入帘青。
 谈笑有鸿儒，往来无白丁。可以调素琴，阅金经。无丝竹之乱耳，无案牍之劳形。南阳诸葛庐，西蜀子云亭。孔子云：何陋之有？</p>
             </div>
 
-            <div class="tab-pane fade" id="tab3">
+            <div class="tab-pane active" id="tab3">
+              <h1>将进酒</h1>
               <p>君不见，黄河之水天上来，奔流到海不复回。</p>
               <p>君不见，高堂明镜悲白发，朝如青丝暮成雪。</p>
               <p>人生得意须尽欢，莫使金樽空对月。</p>
@@ -98,12 +102,14 @@
 
         </div> <!-- end class="tab-content" -->
       </div> <!-- end class="col-md-10" -->
-    </div> <!-- end row-fluid-->
+
+    </div> <!-- end row-->
   </div> <!-- class="container-fluid"-->
+
   <script>
-   $(function () {
-      $('#myTab li:eq(1) a').tab('show');
-   });
+    $(function () {
+      $('#myTab a').tab('show');
+    })
   </script>
 
 </body>
